@@ -5,7 +5,7 @@ public class Person {
     String surname;
     Integer age;
 
-    public Person (String name, String surname, Integer age) {
+    public Person(String name, String surname, Integer age) {
         this.name = name;
         this.surname = surname;
         this.age = age;
@@ -34,5 +34,4 @@ public class Person {
     public void setAge(Integer age) {
         this.age = age;
     }
-
 }

@@ -7,7 +7,12 @@ public class Main {
     Integer meniu;
 
     public Main() {
-        PersonController object = new PersonController();
+        PersonController personController = new PersonController();
+        IrasymasIFaila irasymasIFaila = new IrasymasIFaila();
+        AtvaizdavimasPagalVarda atvaizdavimasPagalVarda = new AtvaizdavimasPagalVarda();
+        AtvaizdavimasPagalVardoRaide atvaizdavimasPagalVardoRaide = new AtvaizdavimasPagalVardoRaide();
+        AtvaizdavimasPagalPavardesRaide atvaizdavimasPagalPavardesRaide = new AtvaizdavimasPagalPavardesRaide();
+        AtvaizdavimasPagalAmziu atvaizdavimasPagalAmziu = new AtvaizdavimasPagalAmziu();
         Integer arBaigtiMeniu = 1;
 
         do {
@@ -24,7 +29,7 @@ public class Main {
             switch (meniu) {
                 case 1: {
                     System.out.println("Vartotojai esantys faile: ");
-                    object.skaitymasIsFailoISarasa();
+                    personController.skaitymasIsFailoISarasa();
                     System.out.println("------------------------------------------------------------");
                     System.out.println("Ar baigti darba?");
                     System.out.println("0 - TAIP; 1 - MENIU.");
@@ -33,7 +38,7 @@ public class Main {
                     break;
                 }
                 case 2: {
-                    object.irasymasIFaila();
+                    irasymasIFaila.irasymasIFaila();
                     System.out.println("------------------------------------------------------------");
                     System.out.println("Ar baigti darba?");
                     System.out.println("0 - TAIP; 1 - MENIU.");
@@ -43,7 +48,7 @@ public class Main {
 
                 }
                 case 3: {
-                    object.skaitymasIrAtvaizdavimasPagalVarda();
+                    atvaizdavimasPagalVarda.atvaizdavimasIsSarasoPagalVarda(personController.getEilutes());
                     System.out.println("------------------------------------------------------------");
                     System.out.println("Ar baigti darba?");
                     System.out.println("0 - TAIP; 1 - MENIU.");
@@ -53,7 +58,7 @@ public class Main {
 
                 }
                 case 4: {
-                    object.skaitymasIrAtvaizdavimasPagalVardoRaide();
+                    atvaizdavimasPagalVardoRaide.AtvaizdavimasIsSarasoPagalVardoRaide(personController.getEilutes());
                     System.out.println("------------------------------------------------------------");
                     System.out.println("Ar baigti darba?");
                     System.out.println("0 - TAIP; 1 - MENIU.");
@@ -63,7 +68,7 @@ public class Main {
 
                 }
                 case 5: {
-                    object.skaitymasIrAtvaizdavimasPagalPavardesRaide();
+                    atvaizdavimasPagalPavardesRaide.AtvaizdavimasIsSarasoPagalPavardesRaide(personController.getEilutes());
                     System.out.println("------------------------------------------------------------");
                     System.out.println("Ar baigti darba?");
                     System.out.println("0 - TAIP; 1 - MENIU.");
@@ -73,7 +78,7 @@ public class Main {
 
                 }
                 case 6: {
-                    object.skaitymasIrAtvaizdavimasPagalAmziu();
+                    atvaizdavimasPagalAmziu.AtvaizdavimasIsSarasoPagalAmziu(personController.getEilutes());
                     System.out.println("------------------------------------------------------------");
                     System.out.println("Ar baigti darba?");
                     System.out.println("0 - TAIP; 1 - MENIU.");
