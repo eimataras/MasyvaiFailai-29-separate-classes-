@@ -8,8 +8,11 @@ public class PersonController {
     public static final String FILE_NAME = "vartotojai.txt";
     // -----------------Darbas su failu-----------------------------------
 
+    private ArrayList<Person> eilutes;
 
-    private ArrayList<Person> eilutes = new ArrayList<>();
+    public PersonController() {
+        this.eilutes = new ArrayList<>();
+    }
 
 
     public ArrayList<Person> getEilutes() {
